@@ -1,6 +1,6 @@
 # 🛍️ E-commerce Chatbot
 
-A powerful AI-powered chatbot built for e-commerce websites, featuring a React.js frontend and a Django backend. The chatbot integrates the Gemini API to answer customer queries and stores data in a PostgreSQL database.
+A powerful AI-powered chatbot built for e-commerce websites, featuring a React.js frontend and a Django backend. The chatbot integrates the Gemini API to answer customer queries and stores data in SQLite database.
 
 ---
 
@@ -10,7 +10,7 @@ A powerful AI-powered chatbot built for e-commerce websites, featuring a React.j
 - Frontend: Built with React.js and styled using Tailwind CSS
 - Backend: Powered by Django and REST framework
 - JWT Authentication: Secure user authentication
-- Database: PostgreSQL for robust data storage
+- Database: SQLite for lightweight and reliable data storage
 - Environment-Friendly: Organized .env management for configurations
 
 ---
@@ -20,7 +20,7 @@ A powerful AI-powered chatbot built for e-commerce websites, featuring a React.j
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
 ---
@@ -145,9 +145,10 @@ Ensure the API calls in your React frontend are correctly pointing to the Django
 ## 🐛 Common Issues and Fixes
 
 ### Backend Issues
-- Database Errors: Ensure migrations are applied, and the db.sqlite3 file is present
+- Database Errors: Ensure migrations are applied, and the db.sqlite3 file has proper permissions
 - Dependency Errors: Run pipenv install again to ensure all packages are installed
 - Gemini API Issues: Verify your API key is correctly set in the .env file
+- SQLite Issues: Make sure the database file is not locked and has write permissions
 
 ### Frontend Issues
 - CORS Issues: Ensure django-cors-headers is installed and configured in Django:
@@ -162,7 +163,7 @@ Ensure the API calls in your React frontend are correctly pointing to the Django
 ## 🛡️ Production Deployment
 
 ### Backend
-1. Switch to a production database like PostgreSQL
+1. Ensure proper SQLite backup strategies
 2. Use a WSGI server (e.g., Gunicorn) for deployment
 3. Configure static file serving
 4. Secure your Gemini API key in production
@@ -194,6 +195,7 @@ Special thanks to:
 - [Django Documentation](https://docs.djangoproject.com)
 - [React Documentation](https://reactjs.org)
 - [Google Gemini API](https://ai.google.dev/docs)
+- [SQLite Documentation](https://sqlite.org/docs.html)
 
 ---
 
@@ -204,6 +206,7 @@ Remember to:
 - Use environment variables for sensitive data
 - Implement proper key rotation and management in production
 - Consider using secret management services in production
+- Keep your SQLite database file secure and properly backed up
 
 ---
 
