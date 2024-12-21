@@ -1,0 +1,197 @@
+
+
+1. User Registration (POST):
+```
+URL: http://localhost:8000/api/v1/users/register/
+Method: POST
+Headers:
+{
+"Content-Type": "application/json"
+}
+Body (raw JSON):
+{
+"username": "testuser",
+"password": "yourpassword123",
+"email": "test@example.com"
+}
+```
+
+2. Login to get JWT Token (POST):
+```
+URL: http://localhost:8000/api/v1/auth/token/
+Method: POST
+Headers:
+{
+"Content-Type": "application/json"
+}
+Body (raw JSON):
+{
+"username": "testuser",
+"password": "yourpassword123"
+}
+Response will include:
+{
+"access": "your_access_token",
+"refresh": "your_refresh_token"
+}
+```
+
+3. Refresh Token (POST):
+```
+URL: http://localhost:8000/api/v1/auth/token/refresh/
+Method: POST
+Headers:
+{
+"Content-Type": "application/json"
+}
+Body (raw JSON):
+{
+"refresh": "your_refresh_token"
+}
+```
+
+4. Verify Token (POST):
+```
+URL: http://localhost:8000/api/v1/auth/token/verify/
+Method: POST
+Headers:
+{
+"Content-Type": "application/json"
+}
+Body (raw JSON):
+{
+"token": "your_access_token"
+}
+```
+
+5. Products APIs:
+
+a. Get All Products (GET):
+```
+URL: http://localhost:8000/api/v1/products/
+Method: GET
+Headers:
+{
+"Authorization": "Bearer your_access_token",
+"Content-Type": "application/json"
+}
+```
+
+b. Create Product (POST):
+```
+URL: http://localhost:8000/api/v1/products/
+Method: POST
+Headers:
+{
+"Authorization": "Bearer your_access_token",
+"Content-Type": "application/json"
+}
+Body (raw JSON):
+{
+"name": "Sample Product",
+"description": "This is a sample product description",
+"price": 99.99,
+"stock": 100
+}
+```
+
+c. Get Single Product (GET):
+```
+URL: http://localhost:8000/api/v1/products/{id}/
+Method: GET
+Headers:
+{
+"Authorization": "Bearer your_access_token",
+"Content-Type": "application/json"
+}
+```
+
+d. Update Product (PUT):
+```
+URL: http://localhost:8000/api/v1/products/{id}/
+Method: PUT
+Headers:
+{
+"Authorization": "Bearer your_access_token",
+"Content-Type": "application/json"
+}
+Body (raw JSON):
+{
+"name": "Updated Product",
+"description": "This is an updated product description",
+"price": 149.99,
+"stock": 200
+}
+```
+
+e. Delete Product (DELETE):
+```
+URL: http://localhost:8000/api/v1/products/{id}/
+Method: DELETE
+Headers:
+{
+"Authorization": "Bearer your_access_token"
+}
+```
+
+6. Chatbot API:
+
+a. New Chat (POST):
+```
+URL: http://localhost:8000/api/v1/chatbot/
+Method: POST
+Headers:
+{
+"Authorization": "Bearer your_access_token",
+"Content-Type": "application/json"
+}
+Body (raw JSON):
+{
+"message": "Tell me about your products"
+}
+Response will include:
+{
+"session_id": "generated_session_id",
+"user_message": "Tell me about your products",
+"bot_response": "..."
+}
+```
+
+b. Continue Chat (POST):
+```
+URL: http://localhost:8000/api/v1/chatbot/
+Method: POST
+Headers:
+{
+"Authorization": "Bearer your_access_token",
+"Content-Type": "application/json"
+}
+Body (raw JSON):
+{
+"message": "What's the price of Product X?",
+"session_id": "your_previous_session_id"
+}
+```
+
+7. Home Page (GET):
+```
+URL: http://localhost:8000/home/
+Method: GET
+No headers or body required
+```
+
+8. Admin Panel:
+```
+URL: http://localhost:8000/admin/
+Method: GET
+Requires Django admin credentials
+```
+
+
+
+All other functionality remains the same. Remember to:
+1. Register first
+2. Get JWT tokens through the auth endpoint
+3. Use the access token in the Authorization header
+4. Refresh tokens when they expire
+5. You can verify tokens using the new verify endpoint
