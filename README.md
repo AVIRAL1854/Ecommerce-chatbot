@@ -117,8 +117,7 @@ Follow the steps below to set up the project locally:
    - Create a .env file in the frontend directory:
      ```env
      VITE_BACKEND_URL=http://127.0.0.1:8000
-     GEMINI_API_KEY=
-     #paste gemini api key here
+     
      ```
 
 4. Run the frontend development server:
