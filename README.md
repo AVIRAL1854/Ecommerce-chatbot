@@ -3,6 +3,11 @@
 A powerful AI-powered chatbot built for e-commerce websites, featuring a React.js frontend and a Django backend. The chatbot integrates the Gemini API to answer customer queries and stores data in SQLite database.
 
 ---
+## Project Demo Vedio 👇
+[![Eth Wallet Demo Video](https://img.youtube.com/vi/-1Wp-Tc36zE?si=9pg2bi-46j_fN4Ag/0.jpg)](https://youtu.be/-1Wp-Tc36zE?si=9pg2bi-46j_fN4Ag)
+
+
+---
 
 ## 🌟 Features
 
