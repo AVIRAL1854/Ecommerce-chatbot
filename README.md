@@ -4,7 +4,7 @@ A powerful AI-powered chatbot built for e-commerce websites, featuring a React.j
 
 ---
 ## Project Demo Vedio 👇
-[![Eth Wallet Demo Video](https://img.youtube.com/vi/-1Wp-Tc36zE?si=9pg2bi-46j_fN4Ag/0.jpg)](https://youtu.be/-1Wp-Tc36zE?si=9pg2bi-46j_fN4Ag)
+[![Eth Wallet Demo Video](https://img.youtube.com/vi/-1Wp-Tc36zE/0.jpg)](https://youtu.be/-1Wp-Tc36zE?si=Kb7Di0owZY-Gy4md)
 
 
 ---
